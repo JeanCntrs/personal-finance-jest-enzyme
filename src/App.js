@@ -2,21 +2,11 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { agregar, eliminar } from "./reducers/finanzas";
 import Form from './components/Form';
+import Dashboard from './components/Dashboard';
 import "./App.css";
 
 function Titulo() {
   return <h2 className="title">Finanzly</h2>;
-}
-
-function Dashboard({ valor }) {
-  return (
-    <div className="column is-half">
-      <div className="box">
-        <p>Total</p>
-        <strong>{valor}</strong>
-      </div>
-    </div>
-  );
 }
 
 function Finanzas({ finanzas, eliminarFinanza }) {
